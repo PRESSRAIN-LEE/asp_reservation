@@ -1,0 +1,157 @@
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+
+
+    display: none;
+
+    width: 15px;
+    height: 44px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+	z-index:90;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+   /* left: 50px;*/
+}
+[dir='rtl'] .slick-prev
+{
+    right: 50px;
+    left: auto;
+}
+
+[dir='rtl'] .slick-prev:before
+{
+    content: '';
+	
+}
+
+.slick-next
+{
+    right: 50px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: 50px;
+}
+
+[dir='rtl'] .slick-next:before
+{
+    content: '';
+}
+
+/* Dots */
+
+.slick-dots
+{
+    position: absolute;
+    bottom:19%;
+    display: block;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+	text-align:center; 
+	left:50%; transform:translateX(-50%);
+
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+  margin: 0 3px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+	
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: '';
+    text-align: center;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	background:transparent;
+	box-sizing:border-box; 
+	border-radius:50%; 
+
+}
+.slick-dots li.slick-active button
+{
+   
+
+}

@@ -1,0 +1,35 @@
+.calendar > p{width:100%;font-size:0px;margin-bottom:10px}
+.calendar > p span.Ym{font-size:23px;margin:0px 10px;font-weight:bold}
+.calendar > p a{display:inline-block;vertical-align:bottom;line-height:23px;font-weight:bold}
+@media only screen and (min-width : 761px){
+.calendar > p{text-align:center}
+.calendar > ul{display:table;width:100%;font-size:0;margin:0 0 15px;padding:0}
+.calendar > ul > li{display:table-row;width:100%}
+.calendar > ul > li > div{display:table-cell;width:14%;min-height:80px;height:80px;border-right:1px solid #dfd8c6;border-bottom:1px solid #dfd8c6}
+.calendar > ul > li > div:last-child{border-right:0px}
+.calendar > ul > li.header > div{height:30px;line-height:30px;min-height:0px;border-top:1px solid #dfd8c6;border-right:1px solid #dfd8c6;border-bottom:1px solid #dfd8c6background:#fbfaf7;color:#777777;font-weight:bold;text-align:center}
+.calendar > ul > li.header > div:last-child{border-right:0px}
+.calendar > ul > li.header > div.Sun{color:#cc2220}
+.calendar > ul > li.header > div.Sat{color:#2453a5}
+.calendar > ul > li > div.empty{background:#fbfaf7}
+.calendar > ul > li > div > time{display:block;padding:3px 0 3px 3px;font-weight:bold;min-height:15px}
+.calendar > ul > li > div > time span{display:none}
+.calendar > ul > li > div ul{width:100%;font-size:0px;text-align:right;padding:0 3px;min-height:60px}
+.calendar > ul > li > div ul li{margin:0px 3px 3px 0px;padding:3px}
+}
+@media only screen and (max-width : 760px){
+.calendar > p{text-align:left}
+.calendar > ul{width:100%;display:block;border-top:2px solid #dfd8c6;margin:0 0 15px;padding:0}
+.calendar > ul > li{display:block}
+.calendar > ul > li > div{width:100%;border-bottom:1px solid #dfd8c6}
+.calendar > ul > li.header{display:none}
+.calendar > ul > li > div.empty{display:none}
+.calendar > ul > li > div > time{display:table-cell;vertical-align:middle;border-right:1px solid #dfd8c6;width:80px;text-align:right;padding:10px 5px 10px 0;background:#fbfaf7;font-weight:bold}
+.calendar > ul > li > div > time span.Ym{font-size:10px;display:block;margin-bottom:5px}
+.calendar > ul > li > div > time span.W{margin-left:5px}
+.calendar > ul > li > div ul{display:table-cell;padding:5px 10px;vertical-align:middle}
+.calendar > ul > li > div ul li{margin:2px 2px 2px 0px;padding:3px}
+}
+.calendar > ul > li > div.today{background:#fff8cf !important}
+.calendar > ul > li > div.Sun > time, .calendar > ul > li > div.Sun > time span{color:#cc2220}
+.calendar > ul > li > div.Sat > time, .calendar > ul > li > div.Sat > time span{color:#2453a5}

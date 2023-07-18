@@ -1,0 +1,225 @@
+/* Visual */
+#visual {position:relative; overflow: hidden; height: 460px; background-color: #f6f6f6;}
+#visual .swiper-slide .inner {position: relative; height: 460px;}
+#visual .swiper-slide img {display: block; position: absolute; top: 50%; transform: translateY(-50%); left: 0; max-width: 100%;}
+#visual .swiper-pagination {left: 0; right: 0; bottom: 54px; margin: 0 auto; height: 10px; width: 1180px; text-align: left;}
+#visual .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {margin: 0 7px 0 0;}
+#visual .swiper-pagination-bullet {box-sizing: border-box; width: 10px; height: 10px; border: 1px solid #ddd; background-color: #ddd; border-radius: 50%; opacity: 1; vertical-align: top;}
+#visual .swiper-pagination-bullet-active {border-color: #FFBA00; background-color: #FFBA00;}
+
+
+
+/* 메인 타이틀 공통 */
+.main_tit {margin: 0 0 25px; text-align: center;}
+.main_tit h2 {font-family: 'GmarketSansBold'; font-size: 32px; color: #222; letter-spacing: -0.96px;}
+.main_tit p {font-size: 16px; font-weight: 500; color: #999;}
+
+.main_tit02 {padding: 80px 0 40px;}
+.main_tit02 h2 {font-family: 'GmarketSansBold'; font-size: 46px; color: #222;}
+.main_tit02 h2 em {font-family: 'GmarketSansBold'; font-size: 46px; color: #FFBA00;}
+.main_tit02 p {margin: 11px 0 0; height: 54px; font-size: 18px; font-weight: 500; color: #999;}
+.main_tit02 p em {color: #FFBA00;}
+.main_tit02 a {display: block; margin: 15px 0 0; box-sizing: border-box; width: 120px; height: 36px; padding: 0 30px 0 15px; line-height: 34px; font-size: 14px; font-weight: 500; color: #FFBA00; border: 1px solid #FFBA00;
+    background: url(../images/main/arrow_y.png) no-repeat 100px center;}
+
+.main_tit02.c_orange h2 {color: #333;}
+.main_tit02.c_orange h2 em {color: #FF5800;}
+.main_tit02.c_orange p em {color: #FF5800;}
+.main_tit02.c_orange a {color: #FF5800; border-color: #FF5800; background-image: url(../images/main/arrow_o.png);}
+
+.section {padding: 70px 0 80px;}
+
+.section_bnn .inner {height: 100%;}
+.section_bnn a {display: block; width: 100%; height: 100%;}
+.section_bnn img {display: block; max-width: 100%; margin: 0 auto;}
+
+.bg_eee {background-color: #eee;}
+
+
+
+/* 프로필 */
+#profile {position: relative; padding: 20px 0 0; background-color: #f6f6f6;}
+#profile img {position: relative; z-index: 1;}
+#profile:before {position: absolute; bottom: 0; left: 0; width: calc(50% - 190px); height: 640px; background-color: #ffba00; content: '';}
+#profile:after {position: absolute; bottom: 0; right: 0; width: calc(50% + 60px); height: 640px; background-color: #fff; content: '';}
+
+
+/* 수상경력 */
+#award {padding: 60px 0 0;}
+
+
+/* PROMOTION */
+.brand_tit {position: relative; display: block; font-family: 'GmarketSansMedium'; font-size: 22px; color: #222; text-align: center; letter-spacing: -0.72px;}
+.brand_tit:before {display: block; position: absolute; top: 50%; left: 0; width: 380px; height: 1px; background-color: #ddd; content: '';}
+.brand_tit:after {display: block; position: absolute; top: 50%; right: 0; width: 380px; height: 1px; background-color: #ddd; content: '';}
+.brand_wrap {margin: 32px 0 0;}
+.brand_wrap + .brand_wrap {margin: 60px 0 0;}
+.brand_list {font-size: 0; text-align: center;}
+.brand_list li {display: inline-block; width: 106px; margin: 40px 0 0 13px;}
+.brand_list li:nth-child(10n + 1) {clear: both; margin-left: 0;}
+.brand_list li a {display: block;}
+.brand_list li a .img_box {position: relative; overflow: hidden; width: 106px; height: 106px;}
+.brand_list li a .img_box:before {visibility: hidden; opacity: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0; box-sizing: border-box; width: 100%; height: 100%; border: 4px solid #ffba00; border-radius: 50%; transition: all 0.3s ease-in-out; content: '';}
+.brand_list li a .img_box img {width: 100%; height: 100%; vertical-align: top;}
+.brand_list li a p {margin: 8px 0 0; font-size: 18px; font-weight: 500; color: #222; text-align: center;}
+.brand_list li a:hover .img_box:before {visibility: visible; opacity: 1;}
+
+
+/* 핫딜특가 */
+#hotdeal {padding: 70px 0 50px; background-color: #f6f6f6;}
+
+/* 무료견적 */
+#free_estimate {padding: 0; height: 300px; background: url(../images/main/free_estimate_bg.jpg) no-repeat center center / cover;}
+#free_estimate a {position: relative;}
+#free_estimate img {position: absolute; bottom: 0; left: 0; right: 0; margin: 0 auto;}
+
+
+
+/* 더블할인특가 */
+#double .inner {background: url(../images/main/double_bg.jpg) no-repeat right 0 / contain;}
+
+.car_swiper {margin: 0 0 0 -20px; box-sizing: border-box; width: calc(100% + 40px); padding: 0 20px 80px;}
+.car_swiper a {display: block; overflow: hidden; border-radius: 16px; box-shadow: 10px 10px 20px #00000014;}
+.car_swiper .img_box {overflow: hidden; width: 220px; height: 220px; background-color: #f6f6f6;}
+.car_swiper .img_box img {width: 100%; vertical-align: top;}
+.car_swiper .txt_box {box-sizing: border-box; padding: 10px 18px 14px; background-color: #fff;}
+.car_swiper .txt_box strong {display: block; font-size: 16px;}
+.car_swiper .txt_box .brand {color: #666;}
+.car_swiper .txt_box .model {color: #999}
+.car_swiper .txt_box .price {margin: 5px 0 0; font-size: 18px; color: #333;}
+
+.car_swiper	.swiper-arrow {position: absolute; top: 10px; box-sizing: border-box; width: 32px; height: 32px; border: 1px solid #ddd; border-radius: 50%; 
+	background-color: transparent; background-repeat: no-repeat; background-position: center; cursor: pointer; z-index: 1;}
+.car_swiper	.swiper-next {right: 30px; background-image: url(../images/main/swiper_next_bk.png);}
+.car_swiper	.swiper-prev {left: 30px; background-image: url(../images/main/swiper_prev_bk.png);}
+
+
+
+/* 스마트서치 */
+#smart_search {padding: 70px 0 5px;}
+.smart_list:after {display: block; clear: both; *zoom: 1; content: '';}
+.smart_list li {float: left; width: 220px; height: 320px;}
+.smart_list li + li {margin: 0 0 0 20px;}
+.smart_list li a {display: block; position: relative; width: 100%; height: 100%;}
+.smart_list .price {position: absolute; top: 25px; left: 18px; font-family: 'GmarketSansMedium'; font-size: 24px; color: #222;}
+.smart_list .bg img {width: 100%;}
+
+
+/* 수입전기차 */
+#electric .inner {background: url(../images/main/electric_bg.jpg) no-repeat right 0 / contain;}
+
+/* 인기 TOP20 */
+#top20 .inner {background: url(../images/main/top_bg.jpg) no-repeat right 0 / contain;}
+
+/* NEW */
+#new_car {background-color: #333;}
+#new_car .inner {background: url(../images/main/newcar_bg.jpg) no-repeat right 0 / contain;}
+
+
+
+
+/* 유튜브스타 */
+#youtube_star {box-sizing: border-box; height: 440px; padding: 50px 0; background-image: linear-gradient(to top, #ffba00 50%, #fff 50%);}
+#youtube_star .inner {position: relative;}
+#youtube_star .inner img {position: absolute; left: 95px; top: -17px;}
+
+
+/* 카카오토 TV */
+#tv_video {overflow: hidden;}
+#tv_video .inner {position: relative;}
+.tv_swiper {overflow: visible; margin: 0 auto; width: 780px;}
+.tv_swiper .swiper-slide {opacity: 0.4;}
+.tv_swiper .swiper-slide-active {opacity: 1;}
+.tv_swiper .swiper-slide-active .video_box {position: relative;}
+.tv_swiper .swiper-slide-active .video_box:before {display: block; position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0; margin: 0 auto; width: 60px; height: 60px; 
+	background: url(../images/main/btn_play.png) no-repeat 0 0; content: '';}
+.tv_swiper .video_box {width: 100%; height: 440px;}
+.tv_swiper .video_box img {display: block; width: 100%; height: 100%;}
+.tv_swiper .video_box video {display: block; width: 100%; height: 100%;}
+#tv_video .swiper-arrow {position: absolute; bottom: 196px; width: 50px; height: 50px; border-radius: 50%; background-color: rgba(0,0,0,0.5); background-repeat: no-repeat; background-position: center; cursor: pointer; z-index: 1;}
+#tv_video .swiper-next {right: 80px; background-image: url(../images/main/swiper_next_wh02.png);}
+#tv_video .swiper-prev {left: 80px; background-image: url(../images/main/swiper_prev_wh02.png);}
+
+/* 온라인문의 & 제휴문의 */
+#inquiry .inner:after {display: block; clear: both; *zoom: 1; content: '';}
+.inquiry_online {float: left; width: 680px;}
+.inquiry_table {position: relative; width: 100%; margin: 20px 0 0;}
+.inquiry_table:before {display: block; position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 1px; background-image: linear-gradient(to right, #333 380px, #ffba00 380px); content: '';}
+.inquiry_table tr {height: 60px; border-bottom: 1px solid #ddd; cursor: pointer;}
+.inquiry_table td {padding: 0 20px;}
+.inquiry_table td.tit strong {display: block; overflow: hidden; width: 460px; font-size: 16px; font-weight: 400; color: #333; text-overflow: ellipsis; white-space: nowrap;}
+.inquiry_table td.name {font-size: 16px; color: #999; text-align: right;}
+.inquiry_online .btn_y {display: block; margin: 20px 0 0; width: 100%; height: 60px; font-size: 20px; font-weight: 500; color: #fff; border: 0; background-color: #FFBA00;}
+
+.inquiry_bnn {position: relative; float: right; width: 470px; height: 470px; background: url(../images/main/inquiry_bnn_bg.jpg) no-repeat 0 0;}
+.inquiry_bnn div {display: block; position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0; margin: 0 auto; text-align: center;}
+.inquiry_bnn div h2 {display: block; font-family: 'GmarketSansBold'; font-size: 32px; color: #fff;}
+.inquiry_bnn div p {margin: 10px 0 0; font-size: 16px; font-weight: 500; color: #fff;}
+.inquiry_bnn div .btn_y02 {display: block; margin: 35px auto 0; width: 200px; height: 60px; font-size: 20px; font-weight: 500; color: #ffba00; border: 2px solid #ffba00; background-color: transparent;}
+.inquiry_bnn div .btn_y02:hover {background-color: #ffba00; color: #fff; transition: all 0.3s ease-in-out;}
+
+
+
+/* 출고후기 */
+#review {background-color: #f7f8fb;}
+#review .inner {position: relative;}
+.review_swiper .swiper-slide a {display: block;}
+.review_swiper .img_box {overflow: hidden; width: 100%; height: 285px;}
+.review_swiper .img_box img {width: 100%; height: 100%; vertical-align: top;}
+.review_swiper .txt_box {box-sizing: border-box; width: 100%; height: 155px; padding: 20px; background-color: #fff;}
+.review_swiper .txt_box .name {display: block; font-size: 20px; font-weight: 500; color: #333;}
+.review_swiper .txt_box .txt {display: block; overflow: hidden; margin: 8px 0 0; width: 100%; height: 78px; line-height: 26px; font-size: 16px; color: #666; text-overflow: ellipsis; white-space: normal; word-wrap: break-word; 
+	display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;}
+#review	.swiper-arrow {position: absolute; top: 108px; width: 32px; height: 32px; border-radius: 50%; background-color: rgba(0,0,0,0.4); background-repeat: no-repeat; background-position: center; cursor: pointer; z-index: 1;}
+#review	.swiper-next {right: 10px; background-image: url(../images/main/swiper_next_wh.png);}
+#review	.swiper-prev {left: 10px; background-image: url(../images/main/swiper_prev_wh.png);}
+
+
+
+/* 지점소개 */
+#office {padding: 70px 0 110px;}
+#office img {max-width: 100%; vertical-align: top;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
