@@ -52,10 +52,7 @@
 	<!--<link rel="stylesheet" href="../../common/_css/page.css?v=<%=cssJsVersion%>">-->
 </head>
 <body>
-	<!--[if lte IE 9]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-	<![endif]-->
-
+	
 	<!-- ========================= preloader start ========================= -->
 	<div class="preloader">
 		<div class="loader">
@@ -213,7 +210,6 @@
 
 	<!-- ========================= JS here ========================= -->
 	<!-- #include virtual="/common/_inc/bottom_script.asp" -->
-
 <%
 	DbClose()
 %>
