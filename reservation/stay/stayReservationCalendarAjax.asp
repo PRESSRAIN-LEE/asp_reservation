@@ -155,8 +155,8 @@
 							End Select
 						End If
 
-						'Response.Write vbTab & vbTab & "<td class='" & divClass & "' id='d_" & Year(dDate) & "-" & fnTwoDigit(Month(dDate)) & "-" & fnTwoDigit(iCurrent) & "'>"
-						Response.Write vbTab & vbTab & "<td class='A " & divClass & "' id='d_" & iCurrent & "'>"
+						Response.Write vbTab & vbTab & "<td class='" & divClass & "' id='d_" & Year(dDate) & "-" & fnTwoDigit(Month(dDate)) & "-" & fnTwoDigit(iCurrent) & "'>"
+						'Response.Write vbTab & vbTab & "<td class='A " & divClass & "' id='d_" & iCurrent & "'>"
 						'Response.Write "<time><span class='Ym'>[" & Year(dDate) & "." & fnTwoDigit(Month(dDate)) & "]</span>" & iCurrent & "<span class='W'>(" & weekName & ")</span></time>"
 
 						'Response.Write vbTab & vbTab & "<td class='" & divClass & "'>"
@@ -232,7 +232,7 @@
 <!--
 	$(document).ready(function() {
 		var className = ""
-		$(".A").addClass("d_9");
+		//$(".A").addClass("d_9");
 		<%
 		If IsArray(rsArray) Then
 			For k = LBound(rsArray, 2) To UBound(rsArray, 2)
@@ -251,9 +251,9 @@
 				//$("#d_<%=rsArray(2, k)%>").addClass("d_8");
 				
 				<%If rsArray(0, k) <= date() Then%>
-				$("#d_<%=rsArray(2, k)%>").addClass("d_8");
+				//$("#d_<%=rsArray(2, k)%>").addClass("d_8");
 				<%Else%>
-				$("#d_<%=rsArray(2, k)%>").addClass("d_9");
+				//$("#d_<%=rsArray(2, k)%>").addClass("d_9");
 				<%End If%>
 
 				console.log(<%=rsArray(2, k)%>);
@@ -271,7 +271,7 @@
 		Else
 		%>
 				
-				$(".A").addClass("d_9");
+				//$(".A").addClass("d_9");
 				
 		<%
 		End If
@@ -287,7 +287,7 @@
 			if($("#d_" + i).text() == $(".A").eq(i-1).text()){
 				//console.log("A: " + i);
 				//console.log($(".d_" + i).text())
-				$("#d_"+i).css("background-color", "#dddddd");
+				//$("#d_"+i).css("background-color", "#dddddd");
 				//break;
 			
 			}else{
@@ -298,12 +298,12 @@
 	});
 
 
-	//날짜 선택 후 인원 선택
+	//날짜 선택 후 인원 선택하러 가기
 	function goReserve2(pa1, pa2, pa3){
 		if(pa3 == "Y"){
 			alert("이미 예약되었습니다.");
 		}else{
-			if(pa2 < "<%=date()%>"){
+			if(pa2 <= "<%=date()%>"){
 				alert("예약 불가");
 				return;
 			}else{
@@ -317,6 +317,7 @@
 					}
 				});
 			}
+			goMemberSelect();
 		}
 	}
 

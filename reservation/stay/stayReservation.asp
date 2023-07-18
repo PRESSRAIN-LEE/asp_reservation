@@ -209,8 +209,8 @@
 	<!-- ========================= scroll-top ========================= -->
 
 	<!-- ========================= JS here ========================= -->
-	<!-- ========================= JS here ========================= -->
 	<!-- #include virtual="/common/_inc/bottom_script.asp" -->
+	<!-- ========================= JS here ========================= -->
 <%
 	DbClose()
 %>
@@ -228,7 +228,7 @@ $(document).on('ready', function() {
 	});
 
 	//기간선택
-	goTermSelect();
+	goTermSelect("", "");
 
 	//인원선택
 	goMemberSelect();
@@ -236,11 +236,6 @@ $(document).on('ready', function() {
 
 	//달력 날짜 선택
 	function goSelectDate(pa){
-		//$('#term').html("");
-		//$('#member').html("");
-		goTermSelect();
-		goMemberSelect();
-
 		var moveUrl = "stayReservationCalendarAjax.asp?spSeq=" + pa;
 		$.ajax( {
 			url:moveUrl,
@@ -248,11 +243,16 @@ $(document).on('ready', function() {
 				$('#calendar').html(data);
 			}
 		} );
+
+		//$('#term').html("");
+		//$('#member').html("");
+		goTermSelect(pa, "");
+		goMemberSelect();
 	}
 
 	//기간선택
-	function goTermSelect(){
-		var moveUrl = "stayReservationTermAjax.asp";
+	function goTermSelect(pa1, pa2){
+		var moveUrl = "stayReservationTermAjax.asp?spSeq=" + pa1 + "&reserveDate=" + pa2;
 		$.ajax( {
 			url:moveUrl,
 			success:function(data) {
