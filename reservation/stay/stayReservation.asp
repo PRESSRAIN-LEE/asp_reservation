@@ -209,7 +209,8 @@
 	<a href="#" class="scroll-top">
 		<i class="lni lni-arrow-up"></i>
 	</a>
-	
+	<!-- ========================= scroll-top ========================= -->
+
 	<!-- ========================= JS here ========================= -->
 	<!-- #include virtual="/common/_inc/bottom_script.asp" -->
 
