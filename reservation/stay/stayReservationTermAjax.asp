@@ -26,36 +26,40 @@
 		sql = sql & "AND B.SP_SEQ = '" & spSeq & "' "
 		sql = sql & "AND B.RD_RESERVE_DATE >= '" & reserveDate & "' "
 		sql = sql & "ORDER BY B.RD_RESERVE_DATE ASC "
-		Response.Write "sql: "& sql
+		'Response.Write "sql: "& sql
 		Set rs = dbconn.execute(sql)
 		If Not rs.eof Then
 			dbReserveDate = rs("RD_RESERVE_DATE")
 		Else
-			dbReserveDate = reserveDate
+			dbReserveDate = dateAdd("d", 10, reserveDate)		'//선택한 날짜에 10일을 더한다
 		End If
 
 		selectedDate = DateDiff("D", reserveDate, dbReserveDate)
 
+		rs.Close
+		Set rs = Nothing
+
 	End If
 %>
-<div class="recent-blog mb-30">
+<div class="recent-blog mb-0">
 	<div class="recent-blog-content">
 		<%If spSeq <> "" Then%>
 			<p><span>객실명: </span><span></span></p>
+		<%Else%>
+			<p><span>객실을 선택하세요.</span></p>
 		<%End If%>
+
 		<%If reserveDate <> "" Then%>
-			<p><span>날짜: </span><span></span></p>
+			<p><span>날짜: </span><span><%=reserveDate%></span></p>
+		<%Else%>
+			<p><span>날짜를 선택하세요.</span></p>
 		<%End If%>
 
-
-		<select name='' id='' class='form-control'>
+		<select name='' id='' class='form-select form-select-lg' aria-label=".form-select-lg">
 			<option value=''>==선택==</option>
-			<%'For d = CDate(reserveDate) To CDate(dbReserveDate) %>
 			<%For d = 1 To selectedDate %>
-			<option value=''><%=d%>박<%=d+1%>일</option>
+			<option value='<%=d+1%>'><%=d%>박<%=d+1%>일</option>
 			<%Next%>
-			<option value=''>2박3일</option>
-			<option value=''>3박4일</option>
 		</select>
 	</div>
 </div>
