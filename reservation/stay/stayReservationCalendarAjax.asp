@@ -98,7 +98,7 @@
 	
 	<div class="row">
 		<div class='col-lg-12'>
-			<table class='table table-bordered table-responsive'>
+			<table class='table table-bordered table-responsive col-12'>
 				<tr class="info">
 					<th class='holy'>일</td>
 					<th class='black'>월</th>
@@ -317,7 +317,7 @@
 					}
 				});
 			}
-			goMemberSelect();
+			goMemberSelect(pa1, "");
 		}
 	}
 
