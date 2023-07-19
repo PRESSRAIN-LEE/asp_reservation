@@ -110,11 +110,36 @@
 							<%Call stayList()%>
 						</div>
 
-						<div class="col-auto mx-auto mt-40">
-							<nav class="mt-5" aria-label="Page navigation example">
+						<div class="col-auto mx-auto mt-40 mb-20">
+							<nav class="mt-0" aria-label="Page navigation example">
 								<%Call userPaging("")%>
 							</nav>
 						</div>
+
+						<%'//인적사항 입력%>
+						<div class="row">
+							<div class='col-lg-12'>
+								<table class='table table-bordered table-responsive table-striped col-12'>
+									<tr>
+										<th scope="row" class='col-lg-4 col-md-4 table-info'>이름</th>
+										<td><input type='text' name='' id='' class='form-control'></td>
+									</tr>
+									<tr>
+										<th scope="row" class='table-info'>전화번호</th>
+										<td><input type='text' name='' id='' class='form-control'></td>
+									</tr>
+									<tr>
+										<th scope="row" class='table-info'>전화번호</th>
+										<td><input type='text' name='' id='' class='form-control'></td>
+									</tr>
+								</table>
+							</div>
+
+							<div class='btn-group' role="group">
+								<button type="button" class="btn btn-primary btn-sm" onClick='javascript:goSaveReserve()'>예약</button>
+							</div>
+						</div>
+						<%'//인적사항 입력%>
 					</div>
 				</div>
 
@@ -124,7 +149,7 @@
 						<div class="sidebar-box recent-blog-box mb-10">
 							<h5 class='mb-3'>날짜 선택</h5>
 							<div class="recent-blog-items">
-								<div class="recent-blog mb-0" id='calendar'>
+								<div class="recent-blog mb-0" id='calendar' style='display: block;'>
 									<%'server.execute("stayReservationCalendar.asp")%>
 									<!-- include file="stayReservationCalendar.asp" -->
 								</div>
@@ -231,7 +256,7 @@ $(document).on('ready', function() {
 	goTermSelect("", "");
 
 	//인원선택
-	goMemberSelect();
+	goMemberSelect("", "");
 });
 
 	//달력 날짜 선택
@@ -247,7 +272,7 @@ $(document).on('ready', function() {
 		//$('#term').html("");
 		//$('#member').html("");
 		goTermSelect(pa, "");
-		goMemberSelect();
+		goMemberSelect(pa, "");
 	}
 
 	//기간선택
@@ -259,17 +284,23 @@ $(document).on('ready', function() {
 				$('#term').html(data);
 			}
 		});
+
+		goMemberSelect(pa1, "");
 	}
 
 	//인원선택
-	function goMemberSelect(){
-		var moveUrl = "stayReservationMemberAjax.asp";
+	function goMemberSelect(pa1, pa2){
+		var moveUrl = "stayReservationMemberAjax.asp?spSeq=" + pa1 + "&reserveDate=" + pa2;
 		$.ajax( {
 			url:moveUrl,
 			success:function(data) {
 				$('#member').html(data);
 			}
 		});
+	}
+
+	//예약 저장
+	function goSaveReserve(){
 	}
 //-->
 </script>
