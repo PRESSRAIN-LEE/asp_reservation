@@ -36,6 +36,7 @@
 
 
 	//======== tiny slider
+/*
 tns({
 		container: '.client-logo-carousel',
 		autoplay: true,
@@ -59,7 +60,7 @@ tns({
 			}
 		}
 	});
-
+*/
 
 	//WOW Scroll Spy
 	var wow = new WOW({
